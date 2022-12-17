@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="submit" name="formulario" method="get">
+        <input type="text" name="name" id="form1_name" placeholder="Nombres">
+        <br>
+        <input type="text" name="name" id="form1_lastname" placeholder="Apellidos">
+        <br>
+        <input type="radio" name="sexo" id="male" value="Hombre">Hombre</input>
+        <input type="radio" name="sexo" id="female" value="Mujer">Mujer</input>
+        <br>
+        <input type="password" name="name" id="form1_password" placeholder="Contraseña">
+        <br>
+        <input type="submit" id="button1" name="button1" value="Registrar">       
+    </form>
+    <script>
+        (function(){
+            let formulario = document.getElementsByName("formulario")[0];
+
+            let validateInputName  = function(e){
+                if(formulario.form1_name.value == 0){
+                    alert("Completa el campo nombre");
+                    e.preventDefault();
+                }
+            };
+
+            let validateRadioInput = function(e){
+                if(formulario.sexo[0].checked == false && formulario.sexo[1].checked == false){
+                    alert("Completa el campo sexo");
+                    e.preventDefault();
+                }
+            };
+
+            let validate = function(e){
+                validateInputName(e);
+                validateRadioInput(e);
+            };
+
+            formulario.addEventListener("submit", validate);
+        }())
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function saludar(){
+            console.log("Hola mundo!");
+        }
+
+        function calcularDoble(num){
+            return num*2;
+        }
+
+        function triplicar(num){
+            num[0]=num[0]*3;
+        }
+
+        console.log("Llamada a la funcion saludar:");
+        saludar();
+
+        let x = parseInt(prompt("ingrese un valor numerico para x:"));
+        console.log("Llamada a la funcion calcular doble: ");
+        console.log("El doble de "+ x +" es: " + calcularDoble(x));
+        console.log("El valor original de x es: " + x);
+
+        console.log("Llamada a la funcion triplicar: ");
+        let array = [x];
+        triplicar(array);
+        console.log("El nuevo valor de x es: "+ array[0]);
+
+    </script>
+</body>
+</html>

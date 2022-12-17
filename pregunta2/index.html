@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Ingrese la cantidad de datos: "));
+        let acum = 0;
+        for (let i = 0; i < n; i++) {
+            let dato = parseInt(prompt("Ingrese el dato "+(i+1)+": "));
+            acum+=dato;
+        }
+        let prom=acum/n;
+        console.log("El promedio es: ", prom);
+    </script>
+</body>
+</html>
